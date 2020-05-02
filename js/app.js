@@ -77,7 +77,7 @@ function undoMove(){
 
 //update picture for misses/mistakes
 function missPic(){
-  document.getElementById('playNowPic').src = 'assets/images/x' + mistakes + '.png';
+  document.getElementById('playNowPic').src = 'images/x' + mistakes + '.png';
 }
 
 // Check if player has won
@@ -124,7 +124,7 @@ function fullGuess(){
 function newGame(){
   mistakes = 0;
   guessed = [];
-  document.getElementById('playNowPic').src = 'assets/images/play.jpg';
+  document.getElementById('playNowPic').src = 'images/play.jpg';
   document.getElementById("oneGuess").removeAttribute('disabled');
 
   //call these functions to start fresh
