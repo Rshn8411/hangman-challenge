@@ -77,7 +77,7 @@ function undoMove(){
 
 //update picture for misses/mistakes
 function missPic(){
-  document.getElementById('playNowPic').src = 'images/x' + mistakes + '.png';
+  document.getElementById('playNowPic').src = 'assets/images/x' + mistakes + '.png';
 }
 
 // Check if player has won
