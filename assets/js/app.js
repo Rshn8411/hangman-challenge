@@ -124,7 +124,7 @@ function fullGuess(){
 function newGame(){
   mistakes = 0;
   guessed = [];
-  document.getElementById('playNowPic').src = 'images/play.jpg';
+  document.getElementById('playNowPic').src = 'assets/images/play.jpg';
   document.getElementById("oneGuess").removeAttribute('disabled');
 
   //call these functions to start fresh
