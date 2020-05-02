@@ -1,11 +1,16 @@
 Updates I would make if I had more time
 
-1. Use additional frameworks (like React.js) to make handling the game easier. 
+1. Use additional frameworks (like React or Node.js) to make handling the game easier. 
 
-2. I didn't have time to set the "Undo" function to undo a "Guess Word" move. So, guessing the
-full word can still only be done once per game. I had intended to use a simple conditional
+2. Undo button - I set this up as a function taht works internally. I also didn't have time to 
+set it to undo a "Guess Word" move. I had intended to use a simple conditional
 statement to handle that piece of the game.
 
-2. Bookmarking: 
+However, the version I designed does not rely on caching game-play in the browser. This means my
+"Undo" doesn't redirect the browser to the URL for the previous turn. This also made it difficult
+to handle these additional requirements: Bookmarking and Sharing. Given more time I would handled 
+events on the server using a different .js script and something like Redis to store game-play
+statistics. Overall, the direction I went was simpler but was unable to meet all requirements. 
 
-3. Sharing: 
+
+ 

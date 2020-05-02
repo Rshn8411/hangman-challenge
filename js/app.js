@@ -20,7 +20,7 @@ let playStatus = null;
 // Randomly picks the word from the wordList; adds to usedWords array
 function pickWordRandom(){
   answer = wordList[Math.floor(Math.random() * wordList.length)];
-  alert(usedWords);
+  //alert(usedWords);
   if (usedWords.indexOf(answer) === -1) {
     usedWords.push(answer);
   } else if (usedWords.length !== wordList.length){
