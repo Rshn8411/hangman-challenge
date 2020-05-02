@@ -1,3 +1,6 @@
+Shaun Ramirez
+5/1/2020
+
 Inital Solution Design
 Functional specifications
 
@@ -11,8 +14,8 @@ Functional specifications
 - Undo Button undoes last move
 - Keyboard buttons for single-letter guesses
 - Guess Word button to be used once per game
-- Bookmarkable Turns ??
-- Sharing games ??
+- Bookmarkable Turns ?? <- need serverside solution
+- Sharing games ?? <- need serverside solution
 
 
 Validation and technical specifications
