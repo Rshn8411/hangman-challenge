@@ -1,0 +1,33 @@
+<!Doctype html>
+<!-- Hangman game by Shaun Ramirez 4/30/2020 -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Hangman</title>
+  <meta name="description" content="Hangman game with Javascript">
+
+  <!-- Bootstrap v4 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center">Hangman Challenge</h1>
+    <div class="text-center"><button class="btn btn-info" id="newGame" onClick="newGame()">New Game</button></div>
+    <div class="text-center" style="font-size:24px">
+      <img id="playNowPic" src="images/play.jpg" alt="let's play image">
+      <p>Guess the word: </p>
+      <p id="wordDash">Word Here</p>
+      <div>Remaining Guesses: <span id="misses">0</span> of <span id="maxIncorrect"></span></div>
+      <div id="letters"></div>
+      <button type="button" class="btn btn-dark" onClick="undoMove()">Undo</button>
+      <button type="button" id="oneGuess" class="btn btn-success" onClick="fullGuess()">Guess Word</button>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

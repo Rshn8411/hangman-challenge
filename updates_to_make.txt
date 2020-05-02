@@ -1,0 +1,11 @@
+Updates I would make if I had more time
+
+1. Use additional frameworks (like React.js) to make handling the game easier. 
+
+2. I didn't have time to set the "Undo" function to undo a "Guess Word" move. So, guessing the
+full word can still only be done once per game. I had intended to use a simple conditional
+statement to handle that piece of the game.
+
+2. Bookmarking: 
+
+3. Sharing: 

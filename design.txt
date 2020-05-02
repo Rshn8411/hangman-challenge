@@ -1,0 +1,78 @@
+Inital Solution Design
+Functional specifications
+
+- Plain Javascript no additional frameworks; HTML & CSS (Bootstrap)
+- Self-contained web-based hangman game (does not use a database for storage)
+- Instead of hangman image use "X" to indicate an incorrect guess
+- Display remaining number of incorrect guesses
+- Show line "tick-marks" to indicate the number of letters in word
+- Correct guesses replace tick marks
+- New Game button to reset game play and choose a new word
+- Undo Button undoes last move
+- Keyboard buttons for single-letter guesses
+- Guess Word button to be used once per game
+- Bookmarkable Turns ??
+- Sharing games ??
+
+
+Validation and technical specifications
+
+- Set array variable for list of words
+- Set empty list for for words that have already been used
+- Gameplay variables:
+answer = as empty string,
+maxIncorrect = as integer for the maximum number of misses/mistakes,
+mistakes = as integer to increment number of misses,
+guessed = as empty array to place guessed letters and check against the answer for a win
+playStatus = initially set to null, used to compare letters against answer and update tick-marks
+
+- Set function pickWordRandom() to pick a word at random from the word list.
+Check if it already exists in the used word list.
+If not then use it and add this word to the usedWords array.
+If it does then recursively call the function again.
+
+- Set function generateKeys() to generate the "letters"/keyboard keys by iterating through the alphabet.
+Splitting these and using nested function to set that letter as the variable for the playerGuess
+function.
+
+- Handle the player guesses with a function playerGuess() that takes in an argument of the letter
+chosen from the nested function.
+This will also use if statement to test if there is a win/loss and update necessary variables:
+playStatus and mistakes counter/picture
+
+- Set button and function undoMove() to undo a previous move.
+This removes the letter from the 'guessed' list and activates the letter button again.
+Reduces the mistakes count by 1 and resets the misses image
+
+- Set function missPic() to update the picture 'X' for missed guesses.
+
+- Set function winCheck() to check if the player has won.
+Check if playStatus is equal to answer. If so, then remove keys and declare "Winner!"
+
+- Set function lossCheck() to check if player has lost.
+Check if the count of mistakes is equal to the max number of potential misses. If so, 
+show what the correct answer is and declare "Sorry, you lose."
+
+- Set function wordToGuess() to determine if the letter guessed is in the initial word 
+Establish new variable to "playStatus" to keep track of progress
+If letter guessed is in answer then set playStatus letter at that index of answer
+
+- Set function mistakesUpdate() to update mistakes count
+
+- Set function fullGuess() to allow the player to take a full-guess, once per game.
+Variable prompt for full word rather than use the keys.
+If the guess equals the answer then declare "That's correct. You win!"
+Else show alert that the player can continue with the game. Add to the mistakes count.
+Disable the "Guess Word" button.
+
+- Set function newGame() to reset (produce a new) game.
+Reset global variables: mistakes, guessed array, misses image, "Guess Word" button.
+Call functions to update the page: pickWordRandom(), wordToGuess(), mistakesUpdate(), generateKeys()
+
+- Display the maximum number of incorrect Guesses.
+
+- Call pickWordRandom(), generateKeys(), wordToGuess() in order to display the initial game play.
+
+
+
+
